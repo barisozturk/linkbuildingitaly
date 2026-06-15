@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Link Building Italy
+
+Production-ready Next.js website for [link-building-italy.com](https://link-building-italy.com), a specialist Italian link building agency based in Rome.
+
+## Tech Stack
+
+- **Next.js 16** (App Router, Static Site Generation)
+- **React 19** with TypeScript
+- **Tailwind CSS 4**
+- **Lucide React** icons
+- Deployed on **Netlify** via `@netlify/plugin-nextjs`
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20+
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                  # App Router pages and routes
+│   ├── page.tsx          # Homepage (targets Link Building Italy keywords)
+│   ├── about/
+│   ├── blog/
+│   ├── case-studies/
+│   ├── contact/
+│   ├── services/
+│   ├── sitemap.ts        # Auto-generated sitemap
+│   └── robots.ts         # Robots.txt
+├── components/           # Reusable UI, SEO, charts
+├── data/                 # Content (services, blog, case studies)
+├── lib/                  # Metadata, schema, utilities
+└── types/                # TypeScript interfaces
+public/
+└── logo.png              # Site logo
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Page | Route | Description |
+|------|-------|-------------|
+| Homepage | `/` | Primary SEO target: Link Building Italy |
+| Services | `/services/*` | 4 service pages (1000+ words each) |
+| Case Studies | `/case-studies/*` | 6 case studies with charts and metrics |
+| Blog | `/blog/*` | 12 SEO articles (800+ words each) |
+| About | `/about` | Agency story and team |
+| Contact | `/contact` | Contact form and Rome office details |
 
-## Deploy on Vercel
+## SEO Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Auto-generated `sitemap.xml` and `robots.txt`
+- Canonical URLs and Open Graph tags on every page
+- Twitter Card metadata
+- JSON-LD schema: Organization, LocalBusiness, Article, FAQ
+- Internal linking between services, blog and case studies
+- Next.js Image optimization for remote Unsplash assets
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment (Netlify)
+
+1. Push this repository to GitHub
+2. Connect the repo in Netlify
+3. Netlify auto-detects Next.js via `netlify.toml`
+4. Set environment variable if needed: none required for static content
+5. Point custom domain `link-building-italy.com` to Netlify DNS
+
+Build command: `npm run build`  
+Plugin: `@netlify/plugin-nextjs`
+
+## Logo
+
+Replace `public/logo.png` with your brand logo. The file is used in the header, footer and Open Graph metadata.
+
+## Contact
+
+**Link Building Italy**  
+Via Roma 22, 5th Floor, 00184 Rome, Italy  
+Email: fabi@site-media.co.uk
+
+Part of [Intseo Media](https://internationalseo.agency).

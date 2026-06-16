@@ -522,7 +522,7 @@ export const BLOG_POSTS: BlogPostData[] = [
       "How to place contributor articles on Italian blogs and publications without triggering editor spam filters or Google penalties.",
     date: "2025-01-30",
     author: "Chiara Lombardi",
-    featuredImage: "https://images.unsplash.com/photo-1455390582261-894cfeb9418d?auto=format&fit=crop&w=1600&q=80",
+    featuredImage: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=1600&q=80",
     content: {
       intro: [
         "Guest posting remains viable in Italy when articles educate readers and links appear naturally. The tactic fails when it becomes a conveyor belt of identical contributor posts on sites that exist only to sell links.",

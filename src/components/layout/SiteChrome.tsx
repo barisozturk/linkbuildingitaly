@@ -210,13 +210,15 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Image
-              src="/logo.png"
-              alt="Link Building Italy"
-              width={180}
-              height={52}
-              className="h-11 w-auto mb-4 brightness-0 invert"
-            />
+            <Link href="/" className="inline-block mb-5 rounded-lg bg-white px-4 py-3">
+              <Image
+                src="/logo.png"
+                alt="Link Building Italy"
+                width={200}
+                height={60}
+                className="h-11 w-auto"
+              />
+            </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-4">
               Editorial link building, digital PR and outreach campaigns for brands targeting the
               Italian search market. Based in Rome, serving clients worldwide.

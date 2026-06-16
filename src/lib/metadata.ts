@@ -8,15 +8,18 @@ export function buildMetadata(params: {
   type?: "website" | "article";
   image?: string;
   noindex?: boolean;
+  absoluteTitle?: boolean;
 }): Metadata {
-  const fullTitle = params.title.includes("|")
+  const fullTitle = params.absoluteTitle
     ? params.title
-    : `${params.title} | ${SITE_NAME}`;
+    : params.title.includes("|")
+      ? params.title
+      : `${params.title} | ${SITE_NAME}`;
   const url = `${SITE_URL}${params.path}`;
   const image = params.image ?? OG_IMAGE;
 
   return {
-    title: fullTitle,
+    title: params.absoluteTitle ? { absolute: fullTitle } : fullTitle,
     description: params.description,
     metadataBase: new URL(SITE_URL),
     alternates: { canonical: url },

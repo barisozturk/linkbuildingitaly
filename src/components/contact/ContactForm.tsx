@@ -37,58 +37,84 @@ export function ContactForm() {
         better our first reply.
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-5" action={FORMSPREE_ENDPOINT} method="POST">
+        <input type="hidden" name="_subject" value="Link Building Italy - Contact Form" />
+        <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+        <input type="hidden" name="_formsource" value="link-building-italy.com/contact" />
+
         <div className="grid sm:grid-cols-2 gap-5">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-primary mb-1.5">
-              Your name
+            <label htmlFor="firstName" className="block text-sm font-medium text-primary mb-1.5">
+              First name
             </label>
             <input
-              id="name"
-              name="name"
+              id="firstName"
+              name="firstName"
               required
-              placeholder="Marco Rossi"
+              placeholder="Marco"
               className="w-full rounded-lg border border-border px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent/25 focus:border-accent bg-white"
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-primary mb-1.5">
-              Work email
+            <label htmlFor="lastName" className="block text-sm font-medium text-primary mb-1.5">
+              Last name (optional)
             </label>
             <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              placeholder="marco@company.com"
+              id="lastName"
+              name="lastName"
+              placeholder="Rossi"
               className="w-full rounded-lg border border-border px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent/25 focus:border-accent bg-white"
             />
           </div>
         </div>
 
         <div>
+          <label htmlFor="company" className="block text-sm font-medium text-primary mb-1.5">
+            Company (optional)
+          </label>
+          <input
+            id="company"
+            name="company"
+            placeholder="Your company"
+            className="w-full rounded-lg border border-border px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent/25 focus:border-accent bg-white"
+          />
+        </div>
+
+        <div>
           <label htmlFor="website" className="block text-sm font-medium text-primary mb-1.5">
-            Website you want to grow in Italy
+            Website you want to grow in Italy (optional)
           </label>
           <input
             id="website"
             name="website"
-            type="url"
             placeholder="https://yoursite.com"
             className="w-full rounded-lg border border-border px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent/25 focus:border-accent bg-white"
           />
         </div>
 
         <div>
+          <label htmlFor="email" className="block text-sm font-medium text-primary mb-1.5">
+            Work email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            placeholder="marco@company.com"
+            className="w-full rounded-lg border border-border px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent/25 focus:border-accent bg-white"
+          />
+        </div>
+
+        <div>
           <label htmlFor="message" className="block text-sm font-medium text-primary mb-1.5">
-            What are you trying to achieve?
+            What are you trying to achieve? (optional)
           </label>
           <textarea
             id="message"
             name="message"
-            required
             rows={5}
-            placeholder="Example: We sell B2B software in Italy and need editorial links from Italian tech publications. Currently ranking page 2 for three head terms..."
+            placeholder="Example: We sell B2B software in Italy and need editorial links from Italian tech publications..."
             className="w-full rounded-lg border border-border px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent/25 focus:border-accent resize-y bg-white leading-relaxed"
           />
         </div>

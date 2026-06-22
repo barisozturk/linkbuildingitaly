@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { ContactForm } from "@/components/contact/ContactForm";
@@ -65,7 +65,7 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-11 h-11 rounded-lg bg-accent-muted flex items-center justify-center shrink-0">
-                    <Phone size={20} className="text-accent" />
+                    <Clock size={20} className="text-accent" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-primary mb-0.5">Hours</p>

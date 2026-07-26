@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Specialist Italian link building agency based in Rome. Editorial backlinks, digital PR and outreach for brands targeting the Italian search market.",
+    "Link Building Italy specialist agency based in Rome. Editorial backlinks, digital PR and outreach for brands targeting the Italian search market.",
   openGraph: {
     siteName: SITE_NAME,
     locale: "en_US",

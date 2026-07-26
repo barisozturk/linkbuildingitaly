@@ -29,7 +29,7 @@ export const metadata = buildMetadata({
   title: "Link Building Italy",
   absoluteTitle: true,
   description:
-    "Specialist Link Building Italy services for international brands. Build Italian backlinks, authority links and editorial placements with white-hat outreach from Rome.",
+    "Link Building Italy specialist services for international brands. Build Italian backlinks, authority links and editorial placements with white-hat outreach from Rome.",
   path: "/",
 });
 
@@ -73,7 +73,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl animate-fade-up">
               <h1 className="text-4xl md:text-6xl font-heading font-bold text-primary mb-6 leading-tight">
-                Link Building in Italy
+                Link Building Italy
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Build authoritative Italian backlinks that drive rankings across Italy. Our Italian

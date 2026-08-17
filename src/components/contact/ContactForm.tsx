@@ -40,7 +40,7 @@ export function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-5" action={FORMSPREE_ENDPOINT} method="POST">
         <input type="hidden" name="_subject" value="Link Building Italy - Contact Form" />
         <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
-        <input type="hidden" name="_formsource" value="link-building-italy.com/contact" />
+        <input type="hidden" name="_formsource" value="link-building-italy.com" />
 
         <div className="grid sm:grid-cols-2 gap-5">
           <div>

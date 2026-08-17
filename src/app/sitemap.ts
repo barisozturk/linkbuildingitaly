@@ -4,20 +4,34 @@ import { CASE_STUDIES } from "@/data/caseStudies";
 import { SERVICES } from "@/data/services";
 import { SITE_URL } from "@/data/site";
 
+const homepageLanguages = {
+  en: `${SITE_URL}/`,
+  nl: `${SITE_URL}/nl`,
+  es: `${SITE_URL}/es`,
+  "x-default": `${SITE_URL}/`,
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = [
-    "",
-    "/about",
-    "/contact",
-    "/services",
-    "/case-studies",
-    "/blog",
-  ].map((path) => ({
-    url: `${SITE_URL}${path}`,
+  const homepagePages: MetadataRoute.Sitemap = [
+    { path: "", priority: 1 },
+    { path: "/nl", priority: 0.95 },
+    { path: "/es", priority: 0.95 },
+  ].map(({ path, priority }) => ({
+    url: `${SITE_URL}${path || "/"}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
-    priority: path === "" ? 1 : 0.8,
+    priority,
+    alternates: { languages: homepageLanguages },
   }));
+
+  const staticPages = ["/about", "/contact", "/services", "/case-studies", "/blog"].map(
+    (path) => ({
+      url: `${SITE_URL}${path}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    }),
+  );
 
   const servicePages = SERVICES.map((service) => ({
     url: `${SITE_URL}${service.slug}`,
@@ -40,5 +54,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...servicePages, ...caseStudyPages, ...blogPages];
+  return [...homepagePages, ...staticPages, ...servicePages, ...caseStudyPages, ...blogPages];
 }

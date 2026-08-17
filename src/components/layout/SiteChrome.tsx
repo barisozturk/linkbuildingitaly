@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { CONTACT_EMAIL, NAV_LINKS, PARENT_ORG, PARENT_ORG_URL, ADDRESS } from "@/data/site";
 import { SERVICES } from "@/data/services";
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   FileText,
@@ -151,7 +152,8 @@ export function Header() {
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center">
+            <div className="hidden lg:flex items-center gap-4">
+              <LanguageSwitcher />
               <Link
                 href="/contact"
                 className="bg-accent hover:bg-accent-dark text-white text-base font-semibold px-7 py-3 rounded-lg transition-colors shadow-sm"
@@ -160,14 +162,17 @@ export function Header() {
               </Link>
             </div>
 
-            <button
-              type="button"
-              className="lg:hidden p-2 text-primary"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle menu"
-            >
-              {mobileOpen ? <X size={26} /> : <Menu size={26} />}
-            </button>
+            <div className="flex items-center gap-3 lg:hidden">
+              <LanguageSwitcher />
+              <button
+                type="button"
+                className="p-2 text-primary"
+                onClick={() => setMobileOpen(!mobileOpen)}
+                aria-label="Toggle menu"
+              >
+                {mobileOpen ? <X size={26} /> : <Menu size={26} />}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -286,8 +291,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/50">
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs text-white/50">
           <p>&copy; {new Date().getFullYear()} Link Building Italy. All rights reserved.</p>
+          <LanguageSwitcher variant="footer" />
           <p>White-hat link building for the Italian market.</p>
         </div>
       </div>

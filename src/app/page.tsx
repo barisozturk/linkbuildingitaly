@@ -24,6 +24,7 @@ import { CASE_STUDIES } from "@/data/caseStudies";
 import { HOMEPAGE_FAQ, TESTIMONIALS } from "@/data/home";
 import { SERVICES } from "@/data/services";
 import { SITE_NAME, SITE_URL } from "@/data/site";
+import { homepageLanguageAlternates } from "@/lib/i18n";
 
 export const metadata = buildMetadata({
   title: "Link Building Italy",
@@ -31,6 +32,9 @@ export const metadata = buildMetadata({
   description:
     "Link Building Italy specialist services for international brands. Build Italian backlinks, authority links and editorial placements with white-hat outreach from Rome.",
   path: "/",
+  locale: "en_US",
+  languages: homepageLanguageAlternates(),
+  alternateLocales: ["nl_NL", "es_ES"],
 });
 
 const serviceIcons: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {

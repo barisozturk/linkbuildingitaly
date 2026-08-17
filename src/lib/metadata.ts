@@ -9,6 +9,9 @@ export function buildMetadata(params: {
   image?: string;
   noindex?: boolean;
   absoluteTitle?: boolean;
+  locale?: string;
+  languages?: Record<string, string>;
+  alternateLocales?: string[];
 }): Metadata {
   const fullTitle = params.absoluteTitle
     ? params.title
@@ -22,7 +25,10 @@ export function buildMetadata(params: {
     title: params.absoluteTitle ? { absolute: fullTitle } : fullTitle,
     description: params.description,
     metadataBase: new URL(SITE_URL),
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: params.languages,
+    },
     robots: params.noindex ? { index: false, follow: false } : undefined,
     openGraph: {
       type: params.type ?? "website",
@@ -31,7 +37,8 @@ export function buildMetadata(params: {
       description: params.description,
       url,
       images: [{ url: image, width: 1200, height: 630, alt: SITE_NAME }],
-      locale: "en_US",
+      locale: params.locale ?? "en_US",
+      alternateLocale: params.alternateLocales,
     },
     twitter: {
       card: "summary_large_image",

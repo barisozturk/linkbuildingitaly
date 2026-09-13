@@ -1,7 +1,7 @@
 export const SITE_URL = "https://link-building-italy.com";
 export const SITE_NAME = "Link Building Italy";
 export const PARENT_ORG = "Intseo Media";
-export const PARENT_ORG_URL = "https://internationalseo.agency";
+export const PARENT_ORG_URL = "https://linkbuildingagency.io/";
 export const CONTACT_EMAIL = "fabi@site-media.co.uk";
 export const OG_IMAGE = `${SITE_URL}/logo.png`;
 export const FORMSPREE_ENDPOINT = "https://formspree.io/f/xqenglqv";

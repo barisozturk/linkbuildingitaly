@@ -27,10 +27,10 @@ import { SITE_NAME, SITE_URL } from "@/data/site";
 import { homepageLanguageAlternates } from "@/lib/i18n";
 
 export const metadata = buildMetadata({
-  title: "Link Building Italy",
+  title: "Link Building Italy | #1 Link Building Services in Italy",
   absoluteTitle: true,
   description:
-    "Link Building Italy specialist services for international brands. Build Italian backlinks, authority links and editorial placements with white-hat outreach from Rome.",
+    "Link Building Italy is a leading agency specializing in Italian link building campaigns, backed by one of the largest databases of Italian backlink opportunities. Contact us today and let us manage a customized link building campaign for your business in Italy.",
   path: "/",
   locale: "en_US",
   languages: homepageLanguageAlternates(),
@@ -80,9 +80,10 @@ export default function HomePage() {
                 Link Building Italy
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Build authoritative Italian backlinks that drive rankings across Italy. Our Italian
-                link building services help SEO managers, marketing teams and international brands
-                earn editorial placements from trusted Italian publishers.
+                Link Building Italy is a leading agency specializing in Italian link building
+                campaigns, backed by one of the largest databases of Italian backlink opportunities.
+                Contact us today and let us manage a customized link building campaign for your
+                business in Italy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link

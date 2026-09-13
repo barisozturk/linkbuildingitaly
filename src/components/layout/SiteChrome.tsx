@@ -215,13 +215,13 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link href="/" className="inline-block mb-5 rounded-lg bg-white px-4 py-3">
+            <Link href="/" className="inline-block mb-5">
               <Image
                 src="/logo.png"
                 alt="Link Building Italy"
                 width={200}
                 height={60}
-                className="h-11 w-auto"
+                className="h-11 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-4">
@@ -292,9 +292,9 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs text-white/50">
-          <p>&copy; {new Date().getFullYear()} Link Building Italy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Link Building Italy. All rights reserved by Intseo Media Ltd.</p>
           <LanguageSwitcher variant="footer" />
-          <p>White-hat link building for the Italian market.</p>
+          <p>Italian Link Building Services</p>
         </div>
       </div>
     </footer>
